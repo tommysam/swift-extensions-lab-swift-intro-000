@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var unicornLevel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,8 @@ class ViewController: UIViewController {
         let susan = "susan"
         print(joel.unicornLevel)
         print(susan.unicornLevel)
+                
+        unicornLevel.text = susan.unicornLevel
     }
 }
 
