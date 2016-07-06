@@ -23,12 +23,18 @@ class ViewController: UIViewController {
         let whisperCool = isCool.whisperIt()
         print(whisperCool)
         
-        let joel = "jim"
+        let joel = "hi hi"
         let susan = "susan"
         print(joel.unicornLevel)
         print(susan.unicornLevel)
+        print(joel.points)
                 
         unicornLevel.text = susan.unicornLevel
+        
+        let word = "hello again and again and again"
+        print(word.pigLatin)
+        
+        
     }
 }
 

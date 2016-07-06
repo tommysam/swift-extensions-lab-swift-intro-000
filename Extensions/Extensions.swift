@@ -25,23 +25,64 @@ extension String {
     }
     
     var pigLatin: String {
+        
         guard self.characters.count > 1 else { return self }
         
         var result = self
-        let firstLetter = self[self.startIndex]
+        let arrayFromString = result.componentsSeparatedByString(" ")
+        var arrayResult:[String] = []
         
-        result.removeAtIndex(result.startIndex)
-        result += String(firstLetter)
-        result += "ay"
+        for word in arrayFromString{
+            
+        var editableWord = word
+        let firstLetter = word[word.startIndex]
+            
+        editableWord.removeAtIndex(result.startIndex)
+        editableWord += String(firstLetter)
+        editableWord += "ay"
+        arrayResult.append(editableWord)
+        }
+        
+        result = arrayResult.joinWithSeparator(" ")
         
         return result
+    }
+    
+    var points: Int {
+        
+        guard self.characters.count > 0 else {return 0}
+        
+        let arrayFromString = self.componentsSeparatedByString("")
+        let consonants = ["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","z"]
+        let vowels = ["a","e","i","o","u","y"]
+        var points = 0
+        
+        for word in arrayFromString {
+            
+            let wordArray = Array(word.characters)
+            
+            for letter in wordArray{
+
+                if consonants.contains(String(letter)) {
+
+                 points += 1
+                    
+                }else if vowels.contains(String(letter)){
+                
+                    points += 2
+                }
+                
+            }
+        }
+        
+        return points
     }
 }
 
 //MARK: - Numbers
 extension Int {
     
-    var halfProps: Int{return half()}
+    var halved: Int{return half()}
     
     var squared: Int {
         return self * self
@@ -74,19 +115,4 @@ extension String{
         
         return unicorns
     }
-    
-    var cornFactor: String{
-        
-        for letter in self.characters {
-            
-            if ["a", "e", "i", "o", "u"].contains(letter){
-                
-                
-            }
-                
-            
-        }
-        
-    }
-    
 }
