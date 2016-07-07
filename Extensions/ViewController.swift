@@ -10,31 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var unicornLevel: UILabel!
+    @IBOutlet weak var unicornLevelLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        let isCool = "sO cOol"
-        let shoutCool = isCool.shoutIt()
-        print(shoutCool)
-        
-        let whisperCool = isCool.whisperIt()
-        print(whisperCool)
-        
-        let joel = "hi hi"
-        let susan = "susan"
-        print(joel.unicornLevel)
-        print(susan.unicornLevel)
-        print(joel.points)
-                
-        unicornLevel.text = susan.unicornLevel
-        
-        let word = "hello again and again and again"
-        print(word.pigLatin)
-        
-        
+        let name = "susan"
+        unicornLevelLabel.text = name.unicornLevel
     }
 }
 

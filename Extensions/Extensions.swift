@@ -11,13 +11,13 @@ import Foundation
 // MARK: - Phrases
 extension String {
     
-    func whisperIt() -> String {
+    func whisper() -> String {
         let whisper = self.lowercaseString
         
         return whisper
     }
     
-    func shoutIt() -> String {
+    func shout() -> String {
         
         let shouts = self.uppercaseString
         
@@ -28,7 +28,7 @@ extension String {
         
         guard self.characters.count > 1 else { return self }
         
-        var result = self
+        var result = self.lowercaseString
         let arrayFromString = result.componentsSeparatedByString(" ")
         var arrayResult:[String] = []
         
@@ -45,7 +45,7 @@ extension String {
         
         result = arrayResult.joinWithSeparator(" ")
         
-        return result
+        return result.capitalizedString
     }
     
     var points: Int {
@@ -63,11 +63,11 @@ extension String {
             
             for letter in wordArray{
 
-                if consonants.contains(String(letter)) {
+                if consonants.contains(String(letter).lowercaseString) {
 
                  points += 1
                     
-                }else if vowels.contains(String(letter)){
+                }else if vowels.contains(String(letter).lowercaseString){
                 
                     points += 2
                 }
@@ -108,11 +108,11 @@ extension String{
     var unicornLevel: String {
         
         var unicorns = ""
-        for _ in 0..<self.characters.count{
-            
-            unicorns.appendContentsOf("🦄")
-        }
-        
+        let strings = self.stringByReplacingOccurrencesOfString(" ", withString: "")
+        print(strings)
+        for _ in 0..<strings.characters.count{
+                unicorns.appendContentsOf("🦄")
+            }
         return unicorns
-    }
+        }
 }

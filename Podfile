@@ -16,14 +16,12 @@ target 'Extensions' do
   target 'ExtensionsTests' do
     inherit! :search_paths
     testing_pods
-    # Pods for testing
+    #Pods for testing
   end
 
   target 'ExtensionsUITests' do
     inherit! :search_paths
     # Pods for testing
   end
-
-
 
 end
