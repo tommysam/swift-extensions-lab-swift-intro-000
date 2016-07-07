@@ -12,6 +12,7 @@ import Foundation
 extension String {
     
     func whisper() -> String {
+        
         let whisper = self.lowercaseString
         
         return whisper
@@ -34,13 +35,13 @@ extension String {
         
         for word in arrayFromString{
             
-        var editableWord = word
-        let firstLetter = word[word.startIndex]
+            var editableWord = word
+            let firstLetter = word[word.startIndex]
             
-        editableWord.removeAtIndex(result.startIndex)
-        editableWord += String(firstLetter)
-        editableWord += "ay"
-        arrayResult.append(editableWord)
+            editableWord.removeAtIndex(result.startIndex)
+            editableWord += String(firstLetter)
+            editableWord += "ay"
+            arrayResult.append(editableWord)
         }
         
         result = arrayResult.joinWithSeparator(" ")
@@ -62,13 +63,13 @@ extension String {
             let wordArray = Array(word.characters)
             
             for letter in wordArray{
-
+                
                 if consonants.contains(String(letter).lowercaseString) {
-
-                 points += 1
+                    
+                    points += 1
                     
                 }else if vowels.contains(String(letter).lowercaseString){
-                
+                    
                     points += 2
                 }
                 
@@ -85,19 +86,24 @@ extension Int {
     var halved: Int{return half()}
     
     var squared: Int {
+        
         return self * self
     }
     
     mutating func square() {
+        
         self = self * self
     }
     
     func half()->Int{
+        
         let newInt = self / 2
+        
         return newInt
     }
     
     func isDivisibleBy(number: Int) -> Bool {
+        
         return self % number == 0
     }
 }
@@ -109,10 +115,12 @@ extension String{
         
         var unicorns = ""
         let strings = self.stringByReplacingOccurrencesOfString(" ", withString: "")
-        print(strings)
+        
         for _ in 0..<strings.characters.count{
-                unicorns.appendContentsOf("🦄")
-            }
-        return unicorns
+            
+            unicorns.appendContentsOf("🦄")
         }
+        
+        return unicorns
+    }
 }
