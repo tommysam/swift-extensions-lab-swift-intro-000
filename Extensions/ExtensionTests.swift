@@ -86,13 +86,6 @@ class IntExtensions: QuickSpec {
                 expect(sampleNumber.squared).to(equal(15241383936))
             }
         }
-        describe("square:") {
-            
-            it("square function should square itself") {
-                sampleNumber.square()
-                expect(sampleNumber).to(equal(15241383936))
-            }
-        }
         describe("half:") {
             
             it("half function should return half of itself") {
