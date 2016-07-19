@@ -90,7 +90,7 @@ class IntExtensions: QuickSpec {
             
             it("half function should return half of itself") {
                 let halfSampleNumber = sampleNumber.half()
-                expect(halfSampleNumber).to(equal(7620691968))
+                expect(halfSampleNumber).to(equal(61728))
             }
         }
         describe("isDivisibleBy:") {
