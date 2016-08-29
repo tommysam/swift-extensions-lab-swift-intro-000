@@ -1,8 +1,8 @@
-#Extensions 
+#Extensions Lab 
 
-##Objectives
-  * Practice creating extensions on classes
-  * Practice calling and printing values associated with extensions created
+## Overview
+
+In this lab, you'll practice creating extensions on classes, and calling and printing values associated with those extensions. 
 
 ##Instructions
 
