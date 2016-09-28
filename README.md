@@ -26,7 +26,7 @@ Open the workspace and create a new empty Swift file called ```Extensions```. Th
 ###Int
 2. Create an extension function for the ```Int``` class called ```half()```
   * Halves itself
-3. Create an extension function for the ```Int``` class called ```isDivisibleBy()```
+3. Create an extension function for the ```Int``` class called ```isDivisible(by:)``` with the name of the argument being number.
   * To find out if the recipient ```Int``` is divisible by the argument
   * Takes in an ```Int``` argument 
   * Returns a ```bool```
@@ -35,7 +35,7 @@ Open the workspace and create a new empty Swift file called ```Extensions```. Th
 5. Create an extension computed property for the ```Int``` class called ```halved```
   * Halves itself by calling a function
 
-##Using Your Extensions
+##Using Your Extensions (this is not tested)
 In ```ViewController.swift``` inside the function body of ```viewDidLoad()```:
 
 1. Create a ```String``` object with the value as your full name called ```fullName``` 

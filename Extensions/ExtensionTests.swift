@@ -97,7 +97,7 @@ class IntExtensions: QuickSpec {
             
             it("isDivisibleBy function should return true if divisible") {
                 
-                let sampleNumberDiv = smallSampleNumber.isDivisibleBy(10)
+                let sampleNumberDiv = smallSampleNumber.isDivisible(by: 10)
                 
                 expect(sampleNumberDiv).to(beTrue())
             }
@@ -105,7 +105,7 @@ class IntExtensions: QuickSpec {
         describe("isDivisibleBy:") {
             
             it("isDivisibleBy function should return false if not divisible") {
-                let sampleNumberDiv = smallSampleNumber.isDivisibleBy(3)
+                let sampleNumberDiv = smallSampleNumber.isDivisible(by: 3)
                 
                 expect(sampleNumberDiv).to(beFalse())
             }
