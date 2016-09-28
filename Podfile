@@ -7,16 +7,11 @@ target 'Extensions' do
 
   # Pods for Extensions
 
-  def testing_pods
-    pod 'Quick'
-    pod 'Nimble'
-    pod 'KIF'
-  end
-
   target 'ExtensionsTests' do
     inherit! :search_paths
-    testing_pods
-    #Pods for testing
+    # Pods for testing
+  pod 'Nimble', git: 'https://github.com/Quick/Nimble.git'
+    pod 'Quick', git: 'https://github.com/Quick/Quick.git'
   end
 
   target 'ExtensionsUITests' do
@@ -24,4 +19,12 @@ target 'Extensions' do
     # Pods for testing
   end
 
+end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['SWIFT_VERSION'] = '3.0'
+        end
+    end
 end
