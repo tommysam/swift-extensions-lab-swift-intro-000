@@ -16,7 +16,7 @@ Open the workspace and create a new empty Swift file called ```Extensions```. Th
 3. Create a ```String``` extension computed property for the ```String``` class called ```pigLatin```
   * Takes the first letter of a word and moves it to the end 
   * Adds the letters "ay" to the end of the word
-  * Should be able to handle sentances
+  * Should be able to handle sentences
   * If it's a single letter, it should return the character
 4. Create an ```Int``` extension computed property for the ```String``` class called ```points``` 
   * Should calculate the amount of points a given string has
@@ -64,3 +64,5 @@ In the ```ViewController.swift```:
 * You'll see that we've added something called an ```IBOutlet``` to the top called ```unicornLevelLabel```. This represents the object we're going to display our text in.
 *  ```unicornLevelLabel``` has a property ```text``` set the value of the property to your name object's ```unicornLevel``` property
 *  Run the program and see your unicorn level displayed in the simulator!
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/swift-extensions-lab'>Extensions Lab</a> on Learn.co and start learning to code for free.</p>
