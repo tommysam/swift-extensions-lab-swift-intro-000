@@ -23,6 +23,7 @@ Open the workspace and create a new empty Swift file called ```Extensions```. Th
   * 1 point for consonants and 2 points for vowels
   * Ignores spaces and numbers, returns zero for empty strings
   * Hint - This is still an extension on the String class
+  * Note - Y is to be taken as a consonant even though it frequently carries a vowel sound. See Jim for more info
 
 ###Int
 2. Create an extension function for the ```Int``` class called ```half()```
