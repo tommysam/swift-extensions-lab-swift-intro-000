@@ -22,6 +22,7 @@ Open the workspace and create a new empty Swift file called ```Extensions```. Th
   * Should calculate the amount of points a given string has
   * 1 point for consonants and 2 points for vowels
   * Ignores spaces and numbers, returns zero for empty strings
+  * **Hint - This is still an extension on the String class **
 
 ###Int
 2. Create an extension function for the ```Int``` class called ```half()```
